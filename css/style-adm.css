@@ -1,0 +1,8 @@
+#twc_form_style{font-size:14px;}
+#twc_form_style p{margin:0px; padding:15px 0px 5px 0px; font-size:14px;}
+.twc_butt1{vertical-align:middle; padding:0px 0px 15px 0px;}
+.twc_butt1 img{display:inline-block; cursor:pointer; vertical-align:middle;}
+.twc_butt1 button{display:inline-block; vertical-align:middle; cursor:pointer;}
+.twc_butt2{padding:30px 0px 0px 0px;}
+#twc_sub_send{cursor:pointer; padding-left:15px; padding-right:15px;}
+#twc_mess{padding:4px 0px 0px 0px; font-size:15px; display:none;}
