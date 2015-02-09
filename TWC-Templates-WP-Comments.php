@@ -3,7 +3,7 @@
 Plugin Name: TWC-Templates-WP-Comments
 Plugin URI: http://help-wp.ru/twc-templates-wordPress-comments
 Description: Template for WordPress Comment
-Version: 0.1
+Version: 0.2
 Author: Chaika Igor
 Author URI: http://help-wp.ru/
 Text Domain: TWC-Templates-WP-Comments
@@ -31,6 +31,9 @@ License: GPL2
 <?php
 	//$twc_lang="TWC-Templates-WordPress-Comments";
 	define ("twc_lang", "TWC-Templates-WP-Comments");
+	define ("twc_const_antispam1", rand(1,9150));
+	define ("twc_const_antispam2", rand(1,9150));
+	define ("twc_const_antispam3", rand(1,9150));
 	include("function.php");
 	
 	/*---------------activation-----------------*/

@@ -95,7 +95,6 @@
 #coommentStyle .ComPag{clear:both; height:auto; padding:10px 0px 20px 0px; text-align:center;}
 #coommentStyle .ComPag a, #coommentStyle .ComPag span{display:inline-block; font-size:16px; margin:0px 5px; font-weight:normal; text-decoration:none;}
 #coommentStyle .ComPag span{font-weight:bold;}
-#coommentStyle #respond #comm1{display:none;}
 #coommentStyle .messErr{color:#ff0000; font-size:1.1em; padding:10px 0px 5px 0px;}
 #coommentStyle .avaSt{float:left; margin-right:10px; margin-bottom:4px; margin-top:4px;}
 #coommentStyle .clearComm{clear:both;}

@@ -1,4 +1,6 @@
 jQuery(document).ready(function(){
+	jQuery("#comment_spam_3").val("");
+	jQuery("#comment_spam_2").val("");
 	jQuery(".shsh").each(function(){
 		var ind=jQuery(this).attr("data-rel");
 		var str=jQuery("#"+ind).parent("li").children("ul").html();

@@ -18,6 +18,7 @@ Wordpress plugin to create a tree of comments on the basis of standard functions
 Plugin TWC-Templates-WP-Comments loads the template to display the comments instead of the standard WP or regular file comments.php
 
 The plugin has a built-in spam protection, which eliminates the automatic comment spam to 99%.
+With modified AntiSpam for comments in version 0.2
 
 == Installation ==
 
@@ -37,10 +38,16 @@ Simply activate.
 
 == Changelog ==
 
+= 0.2 =
+* Modified AntiSpam for comments
+
 = 0.1 =
 * First version plugin.
 
 == Upgrade Notice ==
+
+= 0.2 =
+Modified AntiSpam for comments
 
 = 0.1 =
 Created plugin

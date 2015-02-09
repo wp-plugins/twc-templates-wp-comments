@@ -51,9 +51,9 @@
 <?php if ( $user_ID ) : ?>
 <p><?php printf(__(''), '<a href="'.get_option('siteurl').'/wp-admin/profile.php">'.$user_identity.'</a>'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out of this account') ?>"><?php _e('Log out &raquo;'); ?></a></p>
 	<textarea id="comm1" name="comment" placeholder="<?php _e("Enter your message",twc_lang);?>"></textarea>
-	<textarea id="comm2" name="comment2" placeholder="<?php _e("Enter your message",twc_lang);?>"></textarea>
 	<input type="submit" id="twc_submit_btn" name="submit" class="submit" value="<?php echo $twc_option_butt_txt;?>" />
 	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	<?php echo twc_antispam_echo();?>
 	<input type="hidden" name="comment_send_info" value="1"/>
 	<?php comment_id_fields(); ?>
 
@@ -63,9 +63,9 @@
 	<input class="text" type="text" id="name" name="email" placeholder="<?php _e("Your e-mail",twc_lang);?>" value="<?php echo $comment_author_email; ?>" />
 	<input type="hidden" name="url" id="url" value=""/>
 	<textarea id="comm1" name="comment" placeholder="<?php _e("Enter your message",twc_lang);?>"></textarea>
-	<textarea id="comm2" name="comment2" placeholder="<?php _e("Enter your message",twc_lang);?>"></textarea>
 	<input type="submit" id="twc_submit_btn" name="submit" class="submit" value="<?php echo $twc_option_butt_txt;?>" />
 	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	<?php echo twc_antispam_echo();?>
 	<input type="hidden" name="comment_send_info" value="1"/>
 	<?php comment_id_fields(); ?>
 <?php endif; ?>

@@ -50,12 +50,27 @@ function twc_enqueue_comment_reply(){
 }
 //antispam function
 function twc_onSendDataComm($commentdata) {
-  $spam_test_field = trim($_POST['comment']);
+  /*$spam_test_field = trim($_POST['comment']);
   if(!empty($spam_test_field)) wp_die('You send spam comment');
   $comment_content = trim($_POST['comment2']);
-  $_POST['comment'] = $comment_content;
-  return $commentdata;
+  $_POST['comment'] = $comment_content;*/
+  $res=(int)$_POST['comment_spam_4']-(int)$_POST['comment_spam_3']+(int)$_POST['comment_spam_1'];
+  $res2=(int)twc_const_antispam2-(int)twc_const_antispam3+(int)twc_const_antispam1;
+  //$res2=$res;
+  if(($_POST['comment_spam_3']=="") && ($_POST['comment_spam_2']=="") && ($_POST['comment_spam_1']!="") && ($_POST['comment_spam_4']!="")){
+	  return $commentdata;
+  }else{
+	  wp_die('You send spam comment');
+  }
 }
+function twc_antispam_echo(){
+	$str='<input type="hidden" id="comment_spam_1" name="comment_spam_1" value="'.twc_const_antispam1.'"/>';
+	$str.='<input type="hidden" id="comment_spam_2" name="comment_spam_2" value="'.twc_const_antispam2.'"/>';
+	$str.='<input type="hidden" id="comment_spam_3" name="comment_spam_3" value="'.twc_const_antispam3.'"/>';
+	$str.='<input type="hidden" id="comment_spam_4" name="comment_spam_4" value="0"/>';
+	return $str;
+}
+
 // error for send comment function 1
 function twc_get_die_handler(){
 	return 'twc_custom_die_handler';
