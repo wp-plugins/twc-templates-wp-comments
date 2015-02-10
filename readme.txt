@@ -38,6 +38,9 @@ Simply activate.
 
 == Changelog ==
 
+= 0.2.1 =
+* Problems with language Ukrainian translator
+
 = 0.2 =
 * Modified AntiSpam for comments
 
@@ -45,6 +48,9 @@ Simply activate.
 * First version plugin.
 
 == Upgrade Notice ==
+
+= 0.2.1 =
+Solved the problem of the Ukrainian language
 
 = 0.2 =
 Modified AntiSpam for comments
