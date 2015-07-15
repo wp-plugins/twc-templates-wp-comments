@@ -42,6 +42,12 @@ License: GPL2
 		if(!$twc_option_butt_txt=get_option('twc_option_butt_txt')) add_option("twc_option_butt_txt","");
 		if(!$twc_option_img_cite=get_option('twc_option_img_cite')) add_option("twc_option_img_cite","null");
 		if(!$twc_option_show_cite=get_option('twc_option_show_cite')) add_option("twc_option_show_cite",1);
+		if(!$twc_option_TXT_comm_h2=get_option('twc_option_TXT_comm_h2')) add_option("twc_option_TXT_comm_h2",__("Comments",twc_lang));
+		if(!$twc_option_TXT_comm_form_h2=get_option('twc_option_TXT_comm_form_h2')) add_option("twc_option_TXT_comm_form_h2",__("Add new comment",twc_lang));
+		if(!$twc_option_TXT_comm_no_comm=get_option('twc_option_TXT_comm_no_comm')) add_option("twc_option_TXT_comm_no_comm",__("No comments yet!",twc_lang));
+		if(!$twc_option_TXT_comm_textarea=get_option('twc_option_TXT_comm_textarea')) add_option("twc_option_TXT_comm_textarea",__("Enter your message",twc_lang));
+		if(!$twc_option_TXT_comm_input1=get_option('twc_option_TXT_comm_input1')) add_option("twc_option_TXT_comm_input1",__("Your name",twc_lang));
+		if(!$twc_option_TXT_comm_input2=get_option('twc_option_TXT_comm_input2')) add_option("twc_option_TXT_comm_input2",__("Your e-mail",twc_lang));
 	}
 	register_activation_hook( __FILE__, 'twc_plugin_activate');
 	/*--------------end-activation-----------------*/

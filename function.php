@@ -115,6 +115,12 @@ function twc_PageOptionFucntion(){
 	$twc_option_butt=get_option('twc_option_butt');
 	$twc_option_butt_txt=get_option('twc_option_butt_txt');
 	$twc_option_img_cite=get_option('twc_option_img_cite');
+	$twc_option_TXT_comm_h2=get_option('twc_option_TXT_comm_h2');
+	$twc_option_TXT_comm_form_h2=get_option('twc_option_TXT_comm_form_h2');
+	$twc_option_TXT_comm_no_comm=get_option('twc_option_TXT_comm_no_comm');
+	$twc_option_TXT_comm_textarea=get_option('twc_option_TXT_comm_textarea');
+	$twc_option_TXT_comm_input1=get_option('twc_option_TXT_comm_input1');
+	$twc_option_TXT_comm_input2=get_option('twc_option_TXT_comm_input2');
 	$twc_option_show_cite=(int)get_option('twc_option_show_cite');
 	$twc_urlDef=plugins_url('img/add-img.png',__FILE__);
 	$twc_urlDef2=plugins_url('templates/img/str-1.png',__FILE__);
@@ -127,6 +133,12 @@ function twc_PageOptionFucntion(){
 	echo '<p>'.__("Button to send the comment",twc_lang).':</p>';
 	echo '<div class="twc_butt1"><img id="twc_sub1" class="twc_upload_image" data-src="'.$twc_urlDef. '" src="'.$twc_option_butt.'" /> <button type="submit" class="twc_remove_image">&times;</button></div>';
 	echo '<p>'.__("The text for button to send the comment",twc_lang).':</p><div class="twc_butt1"><input id="twc_sub2" type="text" value="'.$twc_option_butt_txt.'" placeholder="default"/></div>';
+	echo '<p>'.__("The text for &laquo;Comments&raquo;",twc_lang).':</p><div class="twc_butt1"><input id="twc_option_TXT_comm_h2" type="text" value="'.$twc_option_TXT_comm_h2.'" placeholder="default"/></div>';
+	echo '<p>'.__("The text for &laquo;Add new comment&raquo;",twc_lang).':</p><div class="twc_butt1"><input id="twc_option_TXT_comm_form_h2" type="text" value="'.$twc_option_TXT_comm_form_h2.'" placeholder="default"/></div>';
+	echo '<p>'.__("The text for &laquo;No comments yet!&raquo;",twc_lang).':</p><div class="twc_butt1"><input id="twc_option_TXT_comm_no_comm" type="text" value="'.$twc_option_TXT_comm_no_comm.'" placeholder="default"/></div>';
+	echo '<p>'.__("The text for &laquo;Enter your message&raquo;",twc_lang).':</p><div class="twc_butt1"><input id="twc_option_TXT_comm_textarea" type="text" value="'.$twc_option_TXT_comm_textarea.'" placeholder="default"/></div>';
+	echo '<p>'.__("The text for &laquo;Your name&raquo;",twc_lang).':</p><div class="twc_butt1"><input id="twc_option_TXT_comm_input1" type="text" value="'.$twc_option_TXT_comm_input1.'" placeholder="default"/></div>';
+	echo '<p>'.__("The text for &laquo;Your e-mail&raquo;",twc_lang).':</p><div class="twc_butt1"><input id="twc_option_TXT_comm_input2" type="text" value="'.$twc_option_TXT_comm_input2.'" placeholder="default"/></div>';
 	if(empty($twc_option_img_cite) || $twc_option_img_cite=="null"){$twc_option_img_cite=$twc_urlDef2;}
 	echo '<p>'.__("Image for the tree comments",twc_lang).' (50х50px):</p>';
 	echo '<div class="twc_butt1"><img id="twc_sub3" class="twc_upload_image" data-src="'.$twc_urlDef2. '" src="'.$twc_option_img_cite.'" /> <button type="submit" class="twc_remove_image">&times;</button></div>';
@@ -139,6 +151,7 @@ function twc_PageOptionFucntion(){
 function twc_plugin_admin_scripts() {
 	if ( ! did_action( 'wp_enqueue_media' ) ){wp_enqueue_media();}
  	wp_enqueue_script( 'twc_upload_but_script', plugins_url('js/script-adm.js',__FILE__), array('jquery'), null, false );
+	wp_localize_script("twc_upload_but_script", "twc_Ajax", array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce('twc_Ajax-nonce') ) );
 	twc_stylesheet_adm();
 }
 function twc_stylesheet_adm(){
@@ -149,10 +162,18 @@ function twc_stylesheet_adm(){
 function twc_send_option_action_callback(){
 	global $wpdb;
 	$host="://".$_SERVER['SERVER_NAME'];
+	$nonce=$_POST['nonce'];
+	if (!wp_verify_nonce( $nonce, 'twc_Ajax-nonce'))wp_die('Stop!');
 	if(($_POST['ok1']=="2eRrHs6D") && $i=strpos($_SERVER['HTTP_REFERER'],$host)){
 		if(!empty($_POST['twc_option_butt'])){update_option("twc_option_butt", $_POST['twc_option_butt']);}
 		if(!empty($_POST['twc_option_img_cite'])){update_option("twc_option_img_cite", $_POST['twc_option_img_cite']);}
 		update_option("twc_option_butt_txt", $_POST['twc_option_butt_txt']);
+		update_option("twc_option_TXT_comm_h2", $_POST['twc_option_TXT_comm_h2']);
+		update_option("twc_option_TXT_comm_form_h2", $_POST['twc_option_TXT_comm_form_h2']);
+		update_option("twc_option_TXT_comm_no_comm", $_POST['twc_option_TXT_comm_no_comm']);
+		update_option("twc_option_TXT_comm_textarea", $_POST['twc_option_TXT_comm_textarea']);
+		update_option("twc_option_TXT_comm_input1", $_POST['twc_option_TXT_comm_input1']);
+		update_option("twc_option_TXT_comm_input2", $_POST['twc_option_TXT_comm_input2']);
 		update_option("twc_option_show_cite", $_POST['twc_option_show_cite']);
 		echo "1".__("Settings have been saved",twc_lang)."";
 		

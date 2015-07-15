@@ -38,6 +38,10 @@ Simply activate.
 
 == Changelog ==
 
+= 0.3 =
+* We add more settings on the admin page
+* Update the local language
+
 = 0.2.1 =
 * Problems with language Ukrainian translator
 
