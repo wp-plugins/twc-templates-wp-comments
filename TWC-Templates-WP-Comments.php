@@ -3,7 +3,7 @@
 Plugin Name: TWC-Templates-WP-Comments
 Plugin URI: http://help-wp.ru/twc-templates-wordPress-comments
 Description: Template for WordPress Comment
-Version: 0.2.1
+Version: 0.3
 Author: Chaika Igor
 Author URI: http://help-wp.ru/
 Text Domain: TWC-Templates-WP-Comments
