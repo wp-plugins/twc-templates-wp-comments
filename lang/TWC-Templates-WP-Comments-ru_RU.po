@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TWC-Templates-WordPress-Comments\n"
+"POT-Creation-Date: 2015-07-15 12:25+0200\n"
+"PO-Revision-Date: 2015-07-15 12:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: Chaika Igor <chaika-igor@ukr.net>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: TWC-Templates-WP-Comments.php:45 templates/comments1.php:9
+msgid "Comments"
+msgstr "Комментарии"
+
+#: TWC-Templates-WP-Comments.php:46 templates/comments1.php:11
+msgid "Add new comment"
+msgstr "Добавить комментарий"
+
+#: TWC-Templates-WP-Comments.php:47 templates/comments1.php:13
+msgid "No comments yet!"
+msgstr "Нет комментариев!"
+
+#: TWC-Templates-WP-Comments.php:48 templates/comments1.php:15
+msgid "Enter your message"
+msgstr "Ваш комментарий"
+
+#: TWC-Templates-WP-Comments.php:49 templates/comments1.php:17
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: TWC-Templates-WP-Comments.php:50 templates/comments1.php:19
+msgid "Your e-mail"
+msgstr "Ваш e-mail"
+
+#: function.php:129
+msgid "Template for WordPress Comment"
+msgstr "Шаблоны для WordPress комментариев"
+
+#: function.php:130
+msgid "Settings plugin for creating beautiful tree comments!"
+msgstr "Настройки плагина для создания красивых древовидных комментариев!"
+
+#: function.php:131
+msgid ""
+"Call the plugin is through standard function wordpress: comments_template()"
+msgstr ""
+"Вызов плагина происходит через стандартную функцию wordpress: "
+"comments_template()"
+
+#: function.php:133
+msgid "Button to send the comment"
+msgstr "Кнопка для отправки комментария"
+
+#: function.php:135
+msgid "The text for button to send the comment"
+msgstr "Кнопка отправить комментарий (текст)"
+
+#: function.php:136
+msgid "The text for &laquo;Comments&raquo;"
+msgstr "Текст «Комментарии»"
+
+#: function.php:137
+msgid "The text for &laquo;Add new comment&raquo;"
+msgstr "Текст «Добавить комментарий»"
+
+#: function.php:138
+msgid "The text for &laquo;No comments yet!&raquo;"
+msgstr "Текст «комментариев нет!»"
+
+#: function.php:139
+msgid "The text for &laquo;Enter your message&raquo;"
+msgstr "Текст «Введите сообщение»"
+
+#: function.php:140
+msgid "The text for &laquo;Your name&raquo;"
+msgstr "Текст «Ваше имя»"
+
+#: function.php:141
+msgid "The text for &laquo;Your e-mail&raquo;"
+msgstr "Текст «Ваш Email»"
+
+#: function.php:143
+msgid "Image for the tree comments"
+msgstr "Изображение для дерева комментариев"
+
+#: function.php:146
+msgid "Hide comments in the unfolding unit"
+msgstr "Скрывать дочерние комментарии"
+
+#: function.php:147
+msgid "Save"
+msgstr "Сохранить"
+
+#: function.php:178
+msgid "Settings have been saved"
+msgstr "Настройки сохранены"
+
+#: templates/comments1.php:7
+msgid "Send"
+msgstr "Отправить"
+
+#: templates/comments1.php:48
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: templates/comments1.php:64
+msgid "Log out of this account"
+msgstr ""
+
+#: templates/comments1.php:64
+msgid "Log out &raquo;"
+msgstr ""
+
+#: templates/comments1.php:101
+msgid "Hide answers"
+msgstr "Скрыть ответы"
+
+#: templates/comments1.php:101
+msgid "Show answers"
+msgstr "Показать ответы"
+
+#~ msgid ""
+#~ "Call the plugin is through standard function wordpress: comments_template "
+#~ "()"
+#~ msgstr ""
+#~ "Вызов плагина происходит через стандартную функцию wordpress: "
+#~ "comments_template()"
